@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: url(/Images/BG2.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar img {
+    width: 170px;
+    padding: 10px;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.navbar {
+    background-color: rgba(95, 89, 78, 0.534);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(26, 24, 24);
+    box-shadow: 0px 15px 10px -15px #111;
+
+}
+
+.navbar .nav-lists a{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    margin: 0 10px;
+    padding: 3 10px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.navbar .nav-lists a:hover {
+    color: rgb(233, 183, 96);  
+}
+
+.navbar .search-register {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.search-register ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-register ul li i {
+    padding: 0 10px;
+    color: aliceblue;
+}
+
+.search-register ul li i:hover {
+    color: rgb(240, 87, 87);
+}
+
+.title {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+
+.title p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+}
+
+.title h2 {
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.title .button {
+    background-color: #003afa8f;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.button-login {
+    margin: 10px 0;
+}
+
+.title .button:hover {
+    background-color: #003afa70;
+    top: -1px;
+    
+}
+
+
+
+
+
+/*******************SLIDESHOW AGAIN***********************/
+
+.container .slides img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 65vh;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.418);
+    border-radius: 5px;
+    
+    
+}
+
+.slides {
+    background-color: rgba(27, 24, 24, 0.507);
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    
+    
+}
+
+.slide-comments {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    border: 2px solid rgb(139, 126, 100);
+    border-style: none solid;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.slide-comments p {
+    font-style: italic;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.slide-comments h1 {
+    font-weight: 300;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+/****************GALLERY SECTION*******************/
+
+.gallery {
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+/***************CARD SECTION******************/
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: 280px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.678);
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.548);
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border: 1px solid wheat;
+    object-fit: contain;
+}
+
+.card-details ul li {
+    font-size: 11px;
+    padding-left: 10px;
+    color: wheat;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: wheat;
+}
+
+.card-details .btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: wheat;
+}
+
+
