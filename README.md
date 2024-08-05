@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @jbprog14
+- 👋 Hi, I’m Jan Bernard Agustin
 - 👀 I’m interested in Learning FrontEnd Developing and Responsive Webpage Developing
 - 🌱 I’m currently learning HTML, CSS and Basic JavaScript
 - 💞️ I’m looking to collaborate on 
