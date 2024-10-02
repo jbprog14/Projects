@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>To-do Notes APP</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Window 1 Tab  -->
+      <div id="menu-window-1" class="window-container">
+        <img
+          id="profile-pic"
+          src="./imgs/Random-man.jpg"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        <button id="edit-profile" class="edit-profile-btn">Edit Profile</button>
+        <button id="upcoming-task" class="upcoming-task-btn">
+          See Upcoming Tasks
+        </button>
+        <button id="completed-task" class="completed-task-btn">
+          See Completed Tasks
+        </button>
+        <button id="sign-out" class="sign-out-btn">Sign Out</button>
+      </div>
+
+      <!-- Window 2 Tab  -->
+      <div id="menu-window-2" class="window-container">
+        <div id="date-weather-time" class="date-weather-time-container">
+          <p>Text</p>
+        </div>
+        <!-- Where Weather API, Date and Hour Method will be put  -->
+        <div id="task-container">
+          <button id="add-new-task" class="add-new-task">
+            <i class="bx bx-plus"></i>
+            <p class="add-new-task-text">Add New Task</p>
+          </button>
+          <ul id="tasks-list" class="tasks-list"></ul>
+        </div>
+      </div>
+
+      <!-- Window 3 Tab -->
+      <div id="menu-window-3" class="window-container"></div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

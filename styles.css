@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0;
+}
+
+body {
+  background-image: url("./imgs/Background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-pic {
+  width: 120px; /* Controls the size of the picture */
+  height: 120px; /* Matches width to maintain a square */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-container {
+  display: flex;
+  justify-content: space-between; /* Adjusts spacing between divs */
+  align-items: center;
+  max-width: 1200px;
+}
+
+.window-container {
+  display: flex;
+  flex-direction: column; /* Aligns buttons vertically */
+  justify-content: space-between; /* Distributes space evenly; sign out button sticks to bottom */
+  align-items: stretch; /* Makes buttons take full width of container */
+  width: 300px; /* Width of the button container */
+  height: 93vh; /* Fixed height for the container */
+  padding: 20px;
+  background-color: #1b1742;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+  margin: 5px;
+}
+
+#menu-window-1 button {
+  padding: 15px;
+  font-size: 13px;
+  background-color: #130f39;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Space between buttons */
+  transition: background-color 0.3s ease;
+}
+
+#menu-window-1 {
+  background-color: #1b1742e0;
+}
+
+#menu-window-2 {
+  width: 600px;
+}
+
+#menu-window-3 {
+  width: 600px;
+}
+
+.edit-profile-btn {
+  font-weight: 700;
+}
+
+.sign-out-btn {
+  margin-top: auto;
+}
+
+#menu-window-1 .sign-out-btn {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Task Container Styles  */
+
+#task-container {
+  background-color: #5348c9;
+  width: 100%;
+  height: 50vh;
+  padding: 5px;
+  border-radius: 0 0 10px 10px;
+}
+
+#task-container button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #c0bafec4;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#menu-window-2 {
+  padding: 0;
+}
+
+/* Add new task Button styles  */
+
+.add-new-task {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.add-new-task i {
+  margin-right: 10px;
+}
+
+.add-new-task p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 50px;
+  letter-spacing: 1px;
+}
+
+/* Weather API / Date and Time Styles  */
+
+.date-weather-time-container {
+  background: linear-gradient(120deg, #6468db, #342f85, #1d0b8d);
+  height: 50vh;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 15px;
+}
