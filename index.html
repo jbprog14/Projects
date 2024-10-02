@@ -13,6 +13,7 @@
   <body>
     <div id="main-container">
       <!-- Window 1 Tab  -->
+      <!-- Where Edit profile, See Upcoming Tasks, See Completed Tasks and Sign Out displayed  -->
       <div id="menu-window-1" class="window-container">
         <img
           id="profile-pic"
@@ -33,9 +34,34 @@
       <!-- Window 2 Tab  -->
       <div id="menu-window-2" class="window-container">
         <div id="date-weather-time" class="date-weather-time-container">
-          <p>Text</p>
+          <!-- Weather card and new Date, new Time Section  -->
+          <form action="" class="weather-form">
+            <input
+              type="text"
+              class="city-input"
+              id="city-input"
+              placeholder="Enter City"
+            />
+            <button type="submit">Search City</button>
+          </form>
+
+          <!-- Full Weather Description based on Input Section  -->
+
+          <div class="weather-card" id="weather-card">
+            <h1 class="city-display">Rizal</h1>
+            <p class="temp-humidity-display">
+              <i class="bx bxs-thermometer"></i>Temp: 90°F
+              <span class="humidity"
+                ><i class="bx bx-wind"></i>Humidity: 75%</span
+              >
+            </p>
+            <p class="weather-emoji">🌞</p>
+            <p class="description-display">Clear Skies</p>
+          </div>
         </div>
         <!-- Where Weather API, Date and Hour Method will be put  -->
+
+        <!-- This is where Task Container of Todo notes will be input  -->
         <div id="task-container">
           <button id="add-new-task" class="add-new-task">
             <i class="bx bx-plus"></i>

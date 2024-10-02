@@ -110,6 +110,74 @@ body {
   padding: 0;
 }
 
+/* Add window 2 weather card styles  */
+
+.date-weather-time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city-input {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border: 1px solid black;
+  background: transparent;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.city-input::placeholder {
+  color: rgba(0, 0, 0, 0.281);
+}
+
+button[type="submit"] {
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid black;
+  background-color: #c0bafec4;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  transform: translate(0, -1px);
+  background-color: #a89ff5c4;
+}
+
+/* Add weather description card styles  */
+
+.weather-card {
+  padding: 0 20px 20px 20px;
+  margin-top: 5px;
+  width: 75%;
+  text-align: center;
+}
+
+.weather-card h1 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.weather-card p {
+  margin: 5px;
+}
+
+.weather-card .humidity {
+  margin-left: 10px;
+}
+
+.weather-emoji {
+  font-size: 2rem;
+}
+
+.weather-card .description-display {
+  font-weight: bold;
+  font-size: 25px;
+}
 /* Add new task Button styles  */
 
 .add-new-task {
