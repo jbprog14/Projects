@@ -151,9 +151,7 @@ button[type="submit"]:hover {
 /* Add weather description card styles  */
 
 .weather-card {
-  padding: 0 20px 20px 20px;
   margin-top: 5px;
-  width: 75%;
   text-align: center;
 }
 
@@ -171,7 +169,7 @@ button[type="submit"]:hover {
 }
 
 .weather-emoji {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .weather-card .description-display {
