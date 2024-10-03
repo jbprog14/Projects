@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0px;
   padding: 0;
 }
@@ -41,7 +42,7 @@ body {
   width: 300px; /* Width of the button container */
   height: 93vh; /* Fixed height for the container */
   padding: 20px;
-  background-color: #1b1742;
+  background-color: #1b1742e0;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid white;
@@ -58,10 +59,6 @@ body {
   cursor: pointer;
   margin-bottom: 10px; /* Space between buttons */
   transition: background-color 0.3s ease;
-}
-
-#menu-window-1 {
-  background-color: #1b1742e0;
 }
 
 #menu-window-2 {
@@ -136,6 +133,7 @@ body {
 button[type="submit"] {
   font-size: 1rem;
   padding: 5px;
+  width: 110px;
   font-weight: bold;
   border-radius: 0 10px 10px 0;
   border: 1px solid black;
@@ -158,10 +156,17 @@ button[type="submit"]:hover {
 .weather-card h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: antiquewhite;
 }
 
 .weather-card p {
   margin: 5px;
+  color: antiquewhite;
+}
+
+.weather-card i {
+  margin-right: 5px;
+  font-size: 1.2rem;
 }
 
 .weather-card .humidity {
@@ -170,6 +175,8 @@ button[type="submit"]:hover {
 
 .weather-emoji {
   font-size: 3rem;
+  margin: 0;
+  padding: 0;
 }
 
 .weather-card .description-display {
@@ -200,9 +207,9 @@ button[type="submit"]:hover {
 /* Weather API / Date and Time Styles  */
 
 .date-weather-time-container {
-  background: linear-gradient(120deg, #6468db, #342f85, #1d0b8d);
+  background: linear-gradient(120deg, #7e81db, #1a1661, #1d0b8d);
   height: 50vh;
   border-radius: 5px;
   padding: 5px;
-  margin: 15px;
+  margin: 10px;
 }

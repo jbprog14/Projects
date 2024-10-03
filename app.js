@@ -54,24 +54,29 @@ function displayWeatherInfo(data) {
   const weatherEmoji = document.createElement("p");
   const descDisplay = document.createElement("p");
 
+  weatherEmoji.textContent = getWeatherEmoji(id);
+  descDisplay.textContent = description
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" "); // To make the first letters of the Strings into uppercase
   cityDisplay.textContent = city;
   tempHumidityDisplay.innerHTML = `<p class="temp-humidity-display">
   <i class="bx bxs-thermometer"></i>Temp: ${(temp - 273.15).toFixed(1)}°C 
   <span class="humidity"
     ><i class="bx bx-wind"></i>Humidity: ${humidity}%</span
   ></p>`; // The temp - 273.15 and .toFixed method makes the temperature appear in celcius that being rounded in 1 decimal places
-  weatherEmoji.textContent = getWeatherEmoji(id);
-  descDisplay.textContent = description;
 
-  cityDisplay.classList.add("weather-card");
-  tempHumidityDisplay.classList.add("p");
   weatherEmoji.classList.add("weather-emoji");
   descDisplay.classList.add("description-display"); // This set of methods access the css styles of each element
+  cityDisplay.classList.add("weather-card");
+  tempHumidityDisplay.classList.add("p");
+
+  weatherCard.appendChild(descDisplay);
+  weatherCard.appendChild(weatherEmoji);
 
   weatherCard.appendChild(cityDisplay);
   weatherCard.appendChild(tempHumidityDisplay);
-  weatherCard.appendChild(weatherEmoji);
-  weatherCard.appendChild(descDisplay); // This set of methods allowing to modify the structure of an HTML document
+  // This set of methods allowing to modify the structure of an HTML document
   // Also this called and vastly part of 'DOM' manipulation technique in Javascript
 } // This function displays the weather info and necessary description for the page
 
