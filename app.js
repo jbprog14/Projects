@@ -100,3 +100,23 @@ function getWeatherEmoji(weatherId) {
       return "❓";
   }
 }
+
+// This set of functions is for Showing the Modal when 'Add New Task' is clicked
+const taskContainer = document.getElementById("task-container");
+const closeModal = document.querySelector(".close");
+const openModal = document.getElementById("myModal");
+
+taskContainer.addEventListener("click", (e) => {
+  e.preventDefault;
+  openModal.style.display = "block";
+}); // This function will trigger and set the display to appear in the page
+
+closeModal.onclick = function () {
+  openModal.style.display = "none";
+}; // This function will trigger and set the display of modal in none
+
+window.onclick = function (event) {
+  if (event.target === openModal) {
+    openModal.style.display = "none";
+  } // This function will trigger to close the Modal if clicked outside the main modal window
+};
