@@ -34,6 +34,12 @@
       <!-- Window 2 Tab  -->
 
       <div id="menu-window-2" class="window-container">
+        <div class="date-time">
+          <!-- <h4 class="current-date">Monday | September 5, 2024</h4>
+          <span class="current-time"><h1>09:48PM</h1></span> -->
+        </div>
+        <!-- Date and Time Section  -->
+
         <div id="date-weather-time" class="date-weather-time-container">
           <!-- Weather card and new Date, new Time Section  -->
           <form action="" class="weather-form">
@@ -59,7 +65,7 @@
             <p class="weather-emoji"></p>
             <p class="description-display">Clear Skies</p> -->
           </div>
-          <div style="margin-top: auto">New Time</div>
+          <p id="blank-msg">Input city to see status</p>
         </div>
 
         <!-- Where Weather API, Date and Hour Method will be put  -->
@@ -70,29 +76,42 @@
             <i class="bx bx-plus"></i>
             <p class="add-new-task-text">Add New Task</p>
           </button>
-          <ul id="tasks-list" class="tasks-list"></ul>
+          <ul id="tasks-list" class="tasks-list">
+            <!-- <li class="task-details">
+              <input type="checkbox" id="added-task" />
+              <h4 class="input-title">Clean Motorcycle</h4>
+              <span class="time-submit"
+                ><p><i>created:</i> September 20, 2024</p></span
+              >
+              <span class="tap-to-edit"
+                ><p><i>tap to edit</i></p></span
+              >
+            </li> -->
+          </ul>
         </div>
 
         <div id="myModal" class="modal">
           <div class="modal-content">
-            <span class="close"><i class="bx bx-x"></i></span>
+            <div class="close"><i class="bx bx-x"></i></div>
+            <form id="task-form">
+              <label for="title-input"><h1 class="title">Title:</h1></label>
+              <input
+                type="text"
+                id="title-input"
+                class="title-input"
+                placeholder="Enter Title"
+              />
+              <label for="desc-input"><h1 class="desc">Description:</h1></label>
+              <textarea
+                id="desc-input"
+                class="desc-input"
+                placeholder="Enter Description"
+              ></textarea>
 
-            <h1 class="title">Title:</h1>
-            <input
-              type="text"
-              id="title-input"
-              class="title-input"
-              placeholder="Enter Title"
-            />
-            <h1 class="desc">Description:</h1>
-            <input
-              type="text"
-              id="desc-input"
-              class="desc-input"
-              placeholder="Enter Description"
-            />
-
-            <button id="save-btn" class="save-btn">Save Task</button>
+              <button type="submit-save" id="save-btn" class="save-btn">
+                Save Task
+              </button>
+            </form>
           </div>
         </div>
       </div>

@@ -76,6 +76,8 @@ function displayWeatherInfo(data) {
 
   weatherCard.appendChild(cityDisplay);
   weatherCard.appendChild(tempHumidityDisplay);
+
+  document.getElementById("blank-msg").textContent = "";
   // This set of methods allowing to modify the structure of an HTML document
   // Also this called and vastly part of 'DOM' manipulation technique in Javascript
 } // This function displays the weather info and necessary description for the page
@@ -102,11 +104,11 @@ function getWeatherEmoji(weatherId) {
 }
 
 // This set of functions is for Showing the Modal when 'Add New Task' is clicked
-const taskContainer = document.getElementById("task-container");
+const addNewTask = document.getElementById("add-new-task");
 const closeModal = document.querySelector(".close");
 const openModal = document.getElementById("myModal");
 
-taskContainer.addEventListener("click", (e) => {
+addNewTask.addEventListener("click", (e) => {
   e.preventDefault;
   openModal.style.display = "block";
 }); // This function will trigger and set the display to appear in the page
@@ -120,3 +122,99 @@ window.onclick = function (event) {
     openModal.style.display = "none";
   } // This function will trigger to close the Modal if clicked outside the main modal window
 };
+
+// Date Today and Time today
+
+// Create new elements for date and time
+const dateContainer = document.createElement("h4");
+const timeContainer = document.createElement("span");
+const timeHeading = document.createElement("h1");
+
+// Get current date and time
+const now = new Date();
+
+// Format the date parts
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const formattedDateParts = now
+  .toLocaleDateString(undefined, options)
+  .split(","); // Returns ["Monday", " September 5, 2024"]
+const day = formattedDateParts[0]; // Day like "Monday"
+const date = formattedDateParts.slice(1).join(",").trim(); // Date like "September 5, 2024"
+
+// Use template literals to create the date string with the " | " separator
+const formattedDate = `${day} | ${date}`;
+
+// Format the time as "09:48PM"
+const formattedTime = now.toLocaleTimeString([], {
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: true,
+});
+
+// Set text content of the created elements
+dateContainer.textContent = formattedDate;
+timeHeading.textContent = formattedTime;
+
+// Add class names using classList
+dateContainer.classList.add("current-date");
+timeContainer.classList.add("current-time");
+
+// Append the time heading to the time container (for structure)
+timeContainer.appendChild(timeHeading);
+
+// Append the date and time containers to the .date-time div
+document.querySelector(".date-time").appendChild(dateContainer);
+document.querySelector(".date-time").appendChild(timeContainer);
+
+// Adding new Task
+
+const titleInput = document.getElementById("title-input");
+const descInput = document.getElementById("desc-input");
+const taskLists = document.getElementById("tasks-list");
+const saveBtn = document.getElementById("save-btn");
+
+saveBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const taskTitle = titleInput.value.trim();
+
+  if (taskTitle) {
+    const newTask = document.createElement("li");
+    const inputTitle = document.createElement("h4");
+    const timeSubmit = document.createElement("p");
+    const tapToEdit = document.createElement("p");
+
+    newTask.innerHTML = `<input type="checkbox" id="added-task" />
+              <h4 class="input-title">${taskTitle.toUpperCase()}</h4>
+              <span class="time-submit"
+                ><p><i>created:</i> ${date}</p></span
+              >
+              <span class="tap-to-edit"
+                ><p><i>tap to edit</i></p></span
+              >`;
+
+    newTask.classList.add("task-details");
+    inputTitle.classList.add("input-title");
+    timeSubmit.classList.add("time-submit");
+    tapToEdit.classList.add("tap-to-edit");
+
+    taskLists.appendChild(newTask);
+
+    titleInput.value = "";
+    descInput.value = "";
+
+    openModal.style.display = "none";
+  } else {
+    alert("Please enter both a title and a description");
+  }
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});

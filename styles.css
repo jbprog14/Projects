@@ -188,6 +188,13 @@ button[type="submit"]:hover {
   font-weight: bold;
   font-size: 25px;
 }
+
+#blank-msg {
+  text-align: center;
+  margin: auto 0;
+  font-size: 20px;
+  color: rgba(250, 235, 215, 0.548);
+}
 /* Add new task Button styles  */
 
 .add-new-task {
@@ -206,6 +213,47 @@ button[type="submit"]:hover {
   font-size: 20px;
   font-weight: bold;
   margin-left: 50px;
+}
+
+/* New Added Task Styles  */
+.task-details {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+  border-bottom: 1px solid black;
+  background-color: #c0bafec4;
+  margin: 5px 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task-details #added-task {
+  margin-right: 10px;
+}
+
+.task-details .input-title {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 18px;
+}
+
+.task-details .time-submit {
+  position: absolute;
+  left: 40px;
+  bottom: 2px;
+  font-size: 10px;
+}
+
+.task-details .tap-to-edit {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+}
+
+.task-details:hover {
+  transform: translate(0, -1px);
+  background-color: #a79ff7c4;
 }
 
 /* MY POP UP MODAL STYLES  */
@@ -231,13 +279,18 @@ button[type="submit"]:hover {
   padding: 40px;
   border-radius: 10px;
 }
-
-.title,
-.desc {
-  margin: 20px 0;
+.title {
   font-size: 2rem;
   letter-spacing: 2px;
   font-weight: 100;
+  margin: 15px 0;
+}
+
+.desc {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin: 15px 0;
 }
 
 .title-input,
@@ -288,8 +341,28 @@ button[type="submit"]:hover {
 
 .date-weather-time-container {
   background: linear-gradient(120deg, #7e81db, #1a1661, #1d0b8d);
-  height: 50vh;
+  height: 40vh;
   border-radius: 5px;
   padding: 5px;
   margin: 10px;
+  border-top: 1px solid rgb(165, 159, 211);
+  border-bottom: 1px solid rgb(165, 159, 211);
+}
+
+/* Date and Time styles  */
+
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.date-time h4 {
+  color: antiquewhite;
+  letter-spacing: 1px;
+}
+
+.current-time {
+  color: antiquewhite;
+  font-size: 15px;
 }
