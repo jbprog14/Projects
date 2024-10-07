@@ -218,3 +218,67 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+// Window 1 buttons functionality
+const editProfile = document.getElementById("edit-profile");
+const seeUpcomingTask = document.getElementById("upcoming-task");
+const seeCompletedTask = document.getElementById("completed-task");
+const signOutBtn = document.getElementById("sign-out");
+const profilePic = document.getElementById("profile-pic");
+
+// editProfile.addEventListener("click", () => {
+//   const featureMsg = document.createElement("h1");
+
+//   featureMsg.innerHTML = "This feature will be updated soon";
+//   featureMsg.classList.add("upcoming-feature-msg");
+//   document.getElementById("menu-window-3").appendChild(featureMsg);
+
+//   setTimeout(() => {
+//     featureMsg.remove();
+//   }, 3000);
+// });
+
+function showFeatureMsg(button, msg, containerId) {
+  button.addEventListener("click", () => {
+    const featureMsg = document.createElement("h1");
+    const msgContainer = document.getElementById(containerId);
+    const existingMsg = msgContainer.querySelector(".upcoming-feature-msg");
+
+    if (existingMsg) {
+      existingMsg.remove();
+    }
+
+    featureMsg.innerHTML = msg;
+    featureMsg.classList.add("upcoming-feature-msg");
+    msgContainer.appendChild(featureMsg);
+
+    setTimeout(() => {
+      featureMsg.remove();
+    }, 3000);
+  });
+}
+showFeatureMsg(
+  editProfile,
+  "This Feature Will Be Updated Soon",
+  "menu-window-3"
+);
+showFeatureMsg(
+  seeUpcomingTask,
+  "This Feature Will Be Updated Soon",
+  "menu-window-3"
+);
+showFeatureMsg(
+  seeCompletedTask,
+  "This Feature Will Be Updated Soon",
+  "menu-window-3"
+);
+showFeatureMsg(
+  signOutBtn,
+  "This Feature Will Be Updated Soon",
+  "menu-window-3"
+);
+showFeatureMsg(
+  profilePic,
+  "This Feature Will Be Updated Soon",
+  "menu-window-3"
+);
