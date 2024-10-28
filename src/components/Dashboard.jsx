@@ -1,6 +1,6 @@
 import React from "react";
-import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
+import Weather from "./Weather";
 
 const Dashboard = () => {
   return (
@@ -14,6 +14,7 @@ const Dashboard = () => {
         <div className="w-full text-center text-slate-100 text-2xl font-thin border-2 border-t-teal-200 border-r-teal-200 p-5 rounded-md backdrop-blur-sm">
           <TodoList />
         </div>
+        <Weather />
       </div>
     </>
   );
