@@ -77,7 +77,7 @@ const Weather = () => {
   //   }, []); // This effect will occur if fetching the data of geolocation is successful
 
   return (
-    <div className="backdrop-blur-sm w-2/4 gap-4 border-2 rounded-md m-10 p-10 border-t-teal-200 border-r-teal-200">
+    <div className="text-center backdrop-blur-sm w-2/4 gap-4 border-2 rounded-md m-2 p-10 border-t-teal-200 border-r-teal-200">
       <form onSubmit={handleSearch} className="text-center">
         <input
           type="text"
@@ -97,33 +97,37 @@ const Weather = () => {
       {/* // Display Error if one occured */}
       {error && <p>{error}</p>}
       {/* // Display Loading indicator while Fetching Data */}
-      {loading && <p>Loading... Please Wait {":)"}</p>}
+      {loading && (
+        <p className="text-center text-white pt-10">
+          Loading... Please Wait {":)"}
+        </p>
+      )}
       {/* // Rendering weather data if Available */}
       {weatherData && !loading && (
-        <div className="w-full">
-          <h2 className="text-[50px] text-white text-center">
-            Weather in {city || weatherData.name}
-          </h2>
-          <div className="bg-gray-900/70 p-2 rounded-md border border-slate-300">
-            <p className="text-white text-[25px] flex justify-between">
+        <div className="w-full mt-5">
+          <div className="m-2 bg-gray-900/70 p-2 rounded-md border border-slate-300">
+            <h2 className="text-[50px] text-white text-center pb-2">
+              Weather in {city || weatherData.name}
+            </h2>
+            <p className="text-white text-[25px] flex justify-between px-5">
               Temperature:{" "}
               <span className="italic">{weatherData.main.temp}°C</span>
             </p>
-            <p className="text-white text-[25px] flex justify-between">
+            <p className="text-white text-[25px] flex justify-between px-5">
               Feels Like:{" "}
               <span className="italic">{weatherData.main.feels_like}°C</span>
             </p>
-            <p className="text-white text-[25px] flex justify-between">
+            <p className="text-white text-[25px] flex justify-between px-5">
               Humidity:{" "}
               <span className="italic">{weatherData.main.humidity}%</span>
             </p>
-            <p className="text-white text-[25px] flex justify-between">
+            <p className="text-white text-[25px] flex justify-between px-5">
               Weather:{" "}
               <span className="italic">
                 {weatherData.weather[0].description}
               </span>
             </p>
-            <p className="text-white text-[25px] flex justify-between">
+            <p className="text-white text-[25px] flex justify-between px-5">
               Wind Speed:{" "}
               <span className="italic">{weatherData.wind.speed}m/s</span>
             </p>
