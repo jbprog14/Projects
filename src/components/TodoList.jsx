@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TodoForm from "./TodoForm";
-import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-uuidv4();
 import Todo from "./Todo";
 import Edit from "./Edit";
 
 const TodoList = () => {
-  const [todoValue, setTodo] = useState([]);
+  // Initialize state with tasks from localStorage if available
+  const [todoValue, setTodo] = useState(() => {
+    const savedTodos = localStorage.getItem("todos");
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
+
+  // Save todos to localStorage whenever todoValue changes
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todoValue));
+  }, [todoValue]);
 
   const createTodo = (todo) => {
     setTodo([...todoValue, { id: uuidv4(), task: todo, isEditing: false }]);
