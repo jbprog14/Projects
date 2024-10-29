@@ -5,23 +5,32 @@ import { useNavigate } from "react-router-dom";
 const GoogleSignIn = () => {
   const navigate = useNavigate();
 
+  // Handle successful login and redirect to dashboard
   const handleLoginSuccess = (response) => {
-    console.log("Login Success Please Proceed", response);
+    console.log("Login Successful. Proceed to Dashboard:", response);
     navigate("/dashboard");
   };
 
+  // Handle login failure and log the error
   const handleLoginFailure = (error) => {
-    console.error("Login Failed", error);
+    console.error("Login Failed:", error);
   };
 
   return (
     <div className="flex justify-center items-center mt-5">
+      {/* Customized Google Login button with SVG icon and 'Log in with Google' text */}
       <GoogleLogin
         onSuccess={handleLoginSuccess}
         onError={handleLoginFailure}
         locale="en"
+        width="194px"
         render={(renderProps) => (
-          <button onClick={renderProps.onClick} disabled={renderProps.disabled}>
+          <button
+            onClick={renderProps.onClick}
+            disabled={renderProps.disabled}
+            className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+          >
+            {/* SVG for Google logo */}
             <svg
               className="w-5 h-5 mr-2"
               fill="white"
